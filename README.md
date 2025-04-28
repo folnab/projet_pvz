@@ -1,6 +1,9 @@
 # projet_pvz
 projet java 4A Alban Flouvat
 Backend - Plants vs Zombies
+
+Attention le code se trouve sur la branche master!!
+
 Description
 Ce projet est le backend Java pour une application Plants vs Zombies.
 Il fournit une API REST permettant de :
@@ -9,10 +12,10 @@ Gérer les plantes, zombies et maps du jeu.
 
 Valider et manipuler les entités via une base de données MySQL.
 
-Ce backend a été développé en Java 17 avec Spring Framework (sans Spring Boot), déployé localement via SmartTomcat (plugin IntelliJ IDEA).
+Ce backend a été développé en Java 16+ avec Spring Framework (sans Spring Boot), déployé localement via SmartTomcat (plugin IntelliJ IDEA).
 
 🔧 Technologies utilisées
-Java 17
+Java 16+
 
 Spring MVC
 
