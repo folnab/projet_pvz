@@ -28,4 +28,25 @@ public class ZombieController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Zombie> getZombieById(@PathVariable int id) {
+        return ResponseEntity.ok(service.getZombieById(id));
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<String> updateZombie(@PathVariable int id, @RequestBody Zombie zombie) {
+        try {
+            service.updateZombie(id, zombie);
+            return ResponseEntity.ok("Zombie mis à jour !");
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteZombie(@PathVariable int id) {
+        service.deleteZombie(id);
+        return ResponseEntity.ok("Zombie supprimé !");
+    }
 }

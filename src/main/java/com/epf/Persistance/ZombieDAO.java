@@ -1,5 +1,6 @@
 package com.epf.Persistance;
 
+import com.epf.Mappers.ZombieRowMapper;
 import com.epf.Models.Zombie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -14,21 +15,44 @@ public class ZombieDAO {
 
     public List<Zombie> findAll() {
         String sql = "SELECT * FROM zombie";
-        return jdbcTemplate.query(sql, (rs, rowNum) -> new Zombie(
-                rs.getInt("id_zombie"),
-                rs.getString("nom"),
-                rs.getInt("point_de_vie"),
-                rs.getDouble("attaque_par_seconde"),
-                rs.getInt("degat_attaque"),
-                rs.getDouble("vitesse_de_deplacement"),
-                rs.getString("chemin_image"),
-                rs.getInt("id_map")
-        ));
+        return jdbcTemplate.query(sql, new ZombieRowMapper());
+    }
+
+    public Zombie findById(int id) {
+        String sql = "SELECT * FROM zombie WHERE id_zombie = ?";
+        return jdbcTemplate.queryForObject(sql, new ZombieRowMapper(), id);
     }
 
     public void CreateZombie(Zombie zombie) {
-        String sql = "INSERT INTO zombie (nom, point_de_vie, attaque_par_seconde, degat_attaque, vitesse_de_deplacement, chemin_image, id_map) VALUES (?, ?, ?, ?, ?, ?, ? )";
-        jdbcTemplate.update(sql, zombie.getNom(), zombie.getPointDeVie(), zombie.getAttaqueParSeconde(), zombie.getDegatAttaque(), zombie.getVitesseDeDeplacement(), zombie.getCheminImage(), zombie.getIdMap());
+        String sql = "INSERT INTO zombie (nom, point_de_vie, attaque_par_seconde, degat_attaque, vitesse_de_deplacement, chemin_image, id_map) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql,
+                zombie.getNom(),
+                zombie.getPointDeVie(),
+                zombie.getAttaqueParSeconde(),
+                zombie.getDegatAttaque(),
+                zombie.getVitesseDeDeplacement(),
+                zombie.getCheminImage(),
+                zombie.getIdMap()
+        );
+    }
+
+    public void updateZombie(Zombie zombie) {
+        String sql = "UPDATE zombie SET nom = ?, point_de_vie = ?, attaque_par_seconde = ?, degat_attaque = ?, vitesse_de_deplacement = ?, chemin_image = ?, id_map = ? WHERE id_zombie = ?";
+        jdbcTemplate.update(sql,
+                zombie.getNom(),
+                zombie.getPointDeVie(),
+                zombie.getAttaqueParSeconde(),
+                zombie.getDegatAttaque(),
+                zombie.getVitesseDeDeplacement(),
+                zombie.getCheminImage(),
+                zombie.getIdMap(),
+                zombie.getIdZombie()
+        );
+    }
+
+    public void deleteZombie(int id) {
+        String sql = "DELETE FROM zombie WHERE id_zombie = ?";
+        jdbcTemplate.update(sql, id);
     }
 }
 

@@ -22,4 +22,17 @@ public class ZombieService {
         }
         repository.CreateZombie(zombie);
     }
+
+    public Zombie getZombieById(int id) {
+        return repository.findById(id);
+    }
+
+    public void updateZombie(int id, Zombie zombie) {
+        zombie.setIdZombie(id);
+        repository.updateZombie(zombie);
+    }
+
+    public void deleteZombie(int id) {
+        repository.deleteZombie(id);
+    }
 }
