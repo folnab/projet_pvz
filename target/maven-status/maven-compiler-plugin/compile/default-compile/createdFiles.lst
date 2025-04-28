@@ -1,1 +1,8 @@
+com\epf\Controllers\ZombieController.class
+com\epf\Models\Map.class
+com\epf\Core\ZombieService.class
 com\epf\Main.class
+com\epf\Models\Plante.class
+com\epf\Models\Zombie.class
+com\epf\config\configDB.class
+com\epf\Persistance\ZombieDAO.class

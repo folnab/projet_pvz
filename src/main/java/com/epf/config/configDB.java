@@ -2,14 +2,20 @@ package com.epf.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import javax.sql.DataSource;
 
 
 @Configuration
+@ComponentScan(basePackages = "com.epf")
+@EnableWebMvc
+@PropertySource("classpath:database.properties")
 public class configDB {
 
     @Value("${db.url}")
@@ -26,6 +32,10 @@ public class configDB {
 
     @Bean
     public DataSource initDataSource(){
+        System.out.println("🔵 Initialisation de la connexion à la base de données...");
+        System.out.println("📌 URL: " + dbUrl);
+        System.out.println("📌 Utilisateur: " + dbUsername);
+
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUrl(dbUrl);
         dataSource.setUsername(dbUsername);

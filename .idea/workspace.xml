@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79bab68b-fd81-4b92-be2a-df464a732860" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/config/configDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/models/Map.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/models/Plante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/models/Zombie.java" afterDir="false" />
+    <list default="true" id="79bab68b-fd81-4b92-be2a-df464a732860" name="Changes" comment="feat1: connexion avec front et map service">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/Controllers/ZombieController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/Core/ZombieService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/Persistance/ZombieDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/config/WebAppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/config/configDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/config/configDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/models/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/Models/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/models/Plante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/Models/Plante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/models/Zombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/Models/Zombie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CoursEpfBack.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/CoursEpfBack.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/CoursEpfBack/WEB-INF/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/CoursEpfBack/WEB-INF/classes/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,21 +52,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Smart Tomcat.pvz_tomcat.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/alflo/Documents/cours_EPF/4A/Java/projet_pvz/target",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Smart Tomcat.pvz_tomcat.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alflo/Documents/cours_EPF/4A/Java/PVZ_V1/zip_PVZ_V1&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="pvz_tomcat" type="com.poratu.idea.plugins.tomcat">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
@@ -66,8 +74,8 @@
       <predefined_log_file id="Tomcat Catalina Log" />
       <predefined_log_file id="Tomcat Manager Log" />
       <predefined_log_file id="Tomcat Host Manager Log" />
-      <option name="catalinaBase" value="" />
-      <option name="contextPath" value="/pvz" />
+      <option name="catalinaBase" value="C:\Users\alflo\.SmartTomcat\projet_pvz\CoursEpfBack" />
+      <option name="contextPath" value="/CoursEpfBack" />
       <option name="docBase" value="C:\Users\alflo\Documents\cours_EPF\4A\Java\projet_pvz\target" />
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
@@ -94,5 +102,9 @@
       <updated>1740413052983</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat1: connexion avec front et map service" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat1: connexion avec front et map service" />
   </component>
 </project>
