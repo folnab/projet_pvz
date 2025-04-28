@@ -4,22 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79bab68b-fd81-4b92-be2a-df464a732860" name="Changes" comment="feat1: connexion avec front et map service">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/Controllers/ZombieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/Core/ZombieService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/Persistance/ZombieDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/config/WebAppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/config/WebConfig.java" afterDir="false" />
+    <list default="true" id="79bab68b-fd81-4b92-be2a-df464a732860" name="Changes" comment="feat2: gestion plantes et création de NewPlanteDTO">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/config/configDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/config/configDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/models/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/Models/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/models/Plante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/Models/Plante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/models/Zombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/Models/Zombie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CoursEpfBack.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/CoursEpfBack.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/CoursEpfBack/WEB-INF/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/CoursEpfBack/WEB-INF/classes/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/Controllers/ZombieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/Controllers/ZombieController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/Core/ZombieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/Core/ZombieService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/Models/Plante.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/Models/Plante.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/Models/Zombie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/Models/Zombie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/Persistance/ZombieDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/Persistance/ZombieDAO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +33,9 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -101,10 +95,54 @@
       <option name="presentableId" value="Default" />
       <updated>1740413052983</updated>
     </task>
+    <task id="LOCAL-00001" summary="feat1: connexion avec front et map service">
+      <option name="closed" value="true" />
+      <created>1745831569091</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745831569091</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat1: connexion avec front et map service">
+      <option name="closed" value="true" />
+      <created>1745831738542</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1745831738542</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat2: gestion zombies">
+      <option name="closed" value="true" />
+      <created>1745853327576</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745853327576</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat2: gestion zombies corrigée (Delete, update et Create) et création de NewZombieDTO">
+      <option name="closed" value="true" />
+      <created>1745857096490</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1745857096490</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat2: gestion plantes et création de NewPlanteDTO">
+      <option name="closed" value="true" />
+      <created>1745859345511</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745859345511</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat1: connexion avec front et map service" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat1: connexion avec front et map service" />
+    <MESSAGE value="feat2: gestion zombies" />
+    <MESSAGE value="feat2: gestion zombies corrigée (Delete, update et Create) et création de NewZombieDTO" />
+    <MESSAGE value="feat2: gestion plantes et création de NewPlanteDTO" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat2: gestion plantes et création de NewPlanteDTO" />
   </component>
 </project>
