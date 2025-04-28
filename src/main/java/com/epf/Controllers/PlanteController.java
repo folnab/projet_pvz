@@ -19,12 +19,12 @@ public class PlanteController {
     private PlanteService service;
 
     @GetMapping
-    public List<Plante> getAllPlantes() {
+    public List<PlanteDTO> getAllPlantes() {
         return service.getAllPlantes();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Plante> getPlanteById(@PathVariable("id") int id) {
+    public ResponseEntity<PlanteDTO> getPlanteById(@PathVariable("id") int id) {
         return ResponseEntity.ok(service.getPlanteById(id));
     }
 

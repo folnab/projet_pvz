@@ -1,6 +1,7 @@
 package com.epf.Controllers;
 
 import com.epf.Core.MapService;
+import com.epf.DTO.MapDTO;
 import com.epf.DTO.NewMapDTO;
 import com.epf.Mappers.MapMapper;
 import com.epf.Models.Map;
@@ -18,12 +19,12 @@ public class MapController {
     private MapService service;
 
     @GetMapping
-    public List<Map> getAllMaps() {
+    public List<MapDTO> getAllMaps() {
         return service.getAllMaps();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Map> getMapById(@PathVariable("id") int id) {
+    public ResponseEntity<MapDTO> getMapById(@PathVariable("id") int id) {
         return ResponseEntity.ok(service.getMapById(id));
     }
 

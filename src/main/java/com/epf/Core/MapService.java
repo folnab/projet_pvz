@@ -2,6 +2,7 @@ package com.epf.Core;
 
 import com.epf.DTO.MapDTO;
 import com.epf.DTO.NewMapDTO;
+import com.epf.DTO.ZombieDTO;
 import com.epf.Mappers.MapMapper;
 import com.epf.Models.Map;
 import com.epf.Models.Zombie;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class MapService {
@@ -20,12 +22,13 @@ public class MapService {
     @Autowired
     private ZombieService zombieService;
 
-    public List<Map> getAllMaps() {
-        return dao.findAll();
+    public List<MapDTO> getAllMaps() {
+        List<Map> maps = dao.findAll();
+        return maps.stream().map(MapMapper::toDTO).collect(Collectors.toList());
     }
 
-    public Map getMapById(int id) {
-        return dao.findById(id);
+    public MapDTO getMapById(int id) {
+        return MapMapper.toDTO(dao.findById(id));
     }
 
     public MapDTO addMap(NewMapDTO newMap) {
@@ -41,10 +44,10 @@ public class MapService {
     }
 
     public void deleteMap(int id) {
-        List<Zombie> zombies = this.zombieService.getAllZombies();
-        for(Zombie zombie : zombies){
-            if(zombie.getIdMap()==id){
-                zombieService.deleteZombie(zombie.getIdZombie());
+        List<ZombieDTO> zombies = this.zombieService.getAllZombies();
+        for(ZombieDTO zombie : zombies){
+            if(zombie.getId_map()==id){
+                zombieService.deleteZombie(zombie.getId_zombie());
             }
         }
         dao.deleteMap(id);

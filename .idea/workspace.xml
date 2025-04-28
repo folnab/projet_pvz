@@ -4,25 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79bab68b-fd81-4b92-be2a-df464a732860" name="Changes" comment="feat4: gestion des maps">
-      <change afterPath="$PROJECT_DIR$/images/map/gazon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/plante/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/plante/doublepois.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/plante/glacepois.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/plante/noix.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/plante/poistireur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/plante/tournesol.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/projectile_mickael_jordan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/projectile_snow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/projectile_standard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/soleil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/zombie/buckethead.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/zombie/conehead.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/zombie/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/zombie/football.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/zombie/runner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/zombie/zombie.png" afterDir="false" />
+    <list default="true" id="79bab68b-fd81-4b92-be2a-df464a732860" name="Changes" comment="feat4: ajout des images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/Controllers/MapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/Controllers/MapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/Controllers/PlanteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/Controllers/PlanteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/Controllers/ZombieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/Controllers/ZombieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/Core/MapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/Core/MapService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/Core/PlanteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/Core/PlanteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/Core/ZombieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/Core/ZombieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/map/gazon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/map/gazon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/plante/default.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/plante/default.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/plante/doublepois.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/plante/doublepois.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/plante/glacepois.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/plante/glacepois.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/plante/noix.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/plante/noix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/plante/poistireur.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/plante/poistireur.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/plante/tournesol.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/plante/tournesol.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/projectile_mickael_jordan.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/projectile_mickael_jordan.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/projectile_snow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/projectile_snow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/projectile_standard.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/projectile_standard.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/soleil.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/soleil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/zombie/buckethead.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/zombie/buckethead.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/zombie/conehead.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/zombie/conehead.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/zombie/default.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/zombie/default.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/zombie/football.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/zombie/football.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/zombie/runner.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/zombie/runner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/images/zombie/zombie.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/webapp/images/zombie/zombie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/Controllers/ZombieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/Controllers/ZombieController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/Core/ZombieService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/Core/ZombieService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +86,10 @@
       <recent name="C:\Users\alflo\Documents\cours_EPF\4A\Java\projet_pvz\webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alflo\Documents\cours_EPF\4A\Java\projet_pvz\src\main\resources\webapp" />
+      <recent name="C:\Users\alflo\Documents\cours_EPF\4A\Java\projet_pvz\src\main\resources" />
+      <recent name="C:\Users\alflo\Documents\cours_EPF\4A\Java\projet_pvz\src\main\webapp" />
+      <recent name="C:\Users\alflo\Documents\cours_EPF\4A\Java\projet_pvz\src\main" />
       <recent name="C:\Users\alflo\Documents\cours_EPF\4A\Java\projet_pvz" />
     </key>
   </component>
@@ -163,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745861662442</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat4: ajout des images">
+      <option name="closed" value="true" />
+      <created>1745869929281</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1745869929281</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -172,6 +192,7 @@
     <MESSAGE value="feat2: gestion zombies corrigée (Delete, update et Create) et création de NewZombieDTO" />
     <MESSAGE value="feat2: gestion plantes et création de NewPlanteDTO" />
     <MESSAGE value="feat4: gestion des maps" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat4: gestion des maps" />
+    <MESSAGE value="feat4: ajout des images" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat4: ajout des images" />
   </component>
 </project>

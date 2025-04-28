@@ -9,14 +9,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class ZombieService {
     @Autowired
     private ZombieDAO repository;
 
-    public List<Zombie> getAllZombies() {
-        return repository.findAll();
+    public List<ZombieDTO> getAllZombies() {
+        List<Zombie> zombies = repository.findAll();
+        return zombies.stream()
+                .map(ZombieMapper::toDTO)
+                .collect(Collectors.toList());
     }
 
     public ZombieDTO addZombie(NewZombieDTO zombieDto) {
@@ -29,8 +33,8 @@ public class ZombieService {
         return ZombieMapper.toDTO(zombie);
     }
 
-    public Zombie getZombieById(int id) {
-        return repository.findById(id);
+    public ZombieDTO getZombieById(int id) {
+        return ZombieMapper.toDTO(repository.findById(id));
     }
 
     public void updateZombie(int id, ZombieDTO zombie) {

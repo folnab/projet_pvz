@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class PlanteService {
@@ -16,12 +17,13 @@ public class PlanteService {
     @Autowired
     private PlanteDAO dao;
 
-    public List<Plante> getAllPlantes() {
-        return dao.findAll();
+    public List<PlanteDTO> getAllPlantes() {
+        List<Plante> plantes = dao.findAll();
+        return plantes.stream().map(PlanteMapper::toDTO).collect(Collectors.toList());
     }
 
-    public Plante getPlanteById(int id) {
-        return dao.findById(id);
+    public PlanteDTO getPlanteById(int id) {
+        return PlanteMapper.toDTO(dao.findById(id));
     }
 
     public PlanteDTO addPlante(NewPlanteDTO newPlanteDTO) {

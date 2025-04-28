@@ -17,7 +17,7 @@ public class ZombieController {
     private ZombieService service;
 
     @GetMapping
-    public List<Zombie> getAllZombies() {
+    public List<ZombieDTO> getAllZombies() {
         return service.getAllZombies();
     }
 
@@ -32,7 +32,7 @@ public class ZombieController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Zombie> getZombieById(@PathVariable("id") int id) {
+    public ResponseEntity<ZombieDTO> getZombieById(@PathVariable("id") int id) {
         return ResponseEntity.ok(service.getZombieById(id));
     }
 
