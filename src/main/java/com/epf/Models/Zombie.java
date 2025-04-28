@@ -11,6 +11,10 @@ public class Zombie {
     private int idMap;
 
     // Constructeur
+
+    public Zombie() {
+    }
+
     public Zombie(int idZombie, String nom, int pointDeVie, double attaqueParSeconde, int degatAttaque, double vitesseDeDeplacement, String cheminImage, int idMap) {
         this.idZombie = idZombie;
         this.nom = nom;
@@ -46,4 +50,6 @@ public class Zombie {
 
     public int getIdMap() { return idMap; }
     public void setIdMap(int idMap) { this.idMap = idMap; }
+
+
 }

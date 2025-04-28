@@ -1,5 +1,8 @@
 package com.epf.Core;
 
+import com.epf.DTO.ZombieDTO;
+import com.epf.DTO.NewZombieDTO;
+import com.epf.Mappers.ZombieMapper;
 import com.epf.Models.Zombie;
 import com.epf.Persistance.ZombieDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,20 +19,24 @@ public class ZombieService {
         return repository.findAll();
     }
 
-    public void addZombie(Zombie zombie) {
-        if (zombie.getPointDeVie() <= 0) {
+    public ZombieDTO addZombie(NewZombieDTO zombieDto) {
+        if (zombieDto.getPoint_de_vie() <= 0) {
             throw new IllegalArgumentException("Un zombie sans vie ne peut pas combattre !");
         }
-        repository.CreateZombie(zombie);
+        Zombie zombie=ZombieMapper.fromCreateDTOToModel(zombieDto);
+        int id = repository.CreateZombie(zombie);
+        zombie.setIdZombie(id);
+        return ZombieMapper.toDTO(zombie);
     }
 
     public Zombie getZombieById(int id) {
         return repository.findById(id);
     }
 
-    public void updateZombie(int id, Zombie zombie) {
-        zombie.setIdZombie(id);
-        repository.updateZombie(zombie);
+    public void updateZombie(int id, ZombieDTO zombie) {
+        Zombie zombieUpdate=ZombieMapper.toModel(zombie);
+        zombieUpdate.setIdZombie(id);
+        repository.updateZombie(zombieUpdate);
     }
 
     public void deleteZombie(int id) {

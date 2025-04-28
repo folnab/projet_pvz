@@ -1,6 +1,8 @@
 package com.epf.Controllers;
 
 import com.epf.Core.ZombieService;
+import com.epf.DTO.NewZombieDTO;
+import com.epf.DTO.ZombieDTO;
 import com.epf.Models.Zombie;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +22,7 @@ public class ZombieController {
     }
 
     @PostMapping
-    public ResponseEntity<String> addZombie(@RequestBody Zombie zombie) {
+    public ResponseEntity<String> addZombie(@RequestBody NewZombieDTO zombie) {
         try {
             service.addZombie(zombie);
             return ResponseEntity.ok("Nouveau zombie ajouté !");
@@ -30,12 +32,12 @@ public class ZombieController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Zombie> getZombieById(@PathVariable int id) {
+    public ResponseEntity<Zombie> getZombieById(@PathVariable("id") int id) {
         return ResponseEntity.ok(service.getZombieById(id));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<String> updateZombie(@PathVariable int id, @RequestBody Zombie zombie) {
+    public ResponseEntity<String> updateZombie(@PathVariable("id") int id, @RequestBody ZombieDTO zombie) {
         try {
             service.updateZombie(id, zombie);
             return ResponseEntity.ok("Zombie mis à jour !");
@@ -45,7 +47,7 @@ public class ZombieController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteZombie(@PathVariable int id) {
+    public ResponseEntity<String> deleteZombie(@PathVariable("id") int id) {
         service.deleteZombie(id);
         return ResponseEntity.ok("Zombie supprimé !");
     }

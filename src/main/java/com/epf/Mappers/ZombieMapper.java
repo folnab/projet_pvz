@@ -1,5 +1,6 @@
 package com.epf.Mappers;
 
+import com.epf.DTO.NewZombieDTO;
 import com.epf.Models.Zombie;
 import com.epf.DTO.ZombieDTO;
 
@@ -29,5 +30,16 @@ public class ZombieMapper {
                 dto.getChemin_image(),
                 dto.getId_map() != null ? dto.getId_map() : 0 // ou gérer null différemment
         );
+    }
+    public static Zombie fromCreateDTOToModel(NewZombieDTO createDTO) {
+        Zombie zombie = new Zombie();
+        zombie.setNom(createDTO.getNom());
+        zombie.setPointDeVie(createDTO.getPoint_de_vie());
+        zombie.setAttaqueParSeconde(createDTO.getAttaque_par_seconde());
+        zombie.setDegatAttaque(createDTO.getDegat_attaque());
+        zombie.setVitesseDeDeplacement(createDTO.getVitesse_de_deplacement());
+        zombie.setCheminImage(createDTO.getChemin_image());
+        zombie.setIdMap(createDTO.getId_map());
+        return zombie;
     }
 }
